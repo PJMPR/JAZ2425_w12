@@ -1,0 +1,6 @@
+rootProject.name = 'users-data-updater'
+
+include 'users-random-api-client'
+project(':users-random-api-client').projectDir = new File(settingsDir,'../users-random-api-client')
+include 'users-data'
+project(':users-data').projectDir = new File(settingsDir,'../users-data')

@@ -1,0 +1,15 @@
+create table address (city_id integer, number integer not null, id bigint not null auto_increment, person_id bigint, street varchar(255), primary key (id)) engine=InnoDB;
+create table location (id integer not null auto_increment, parent_id integer, name varchar(255), type varchar(255), primary key (id)) engine=InnoDB;
+create table person (age integer, date_of_birth datetime(6), id bigint not null auto_increment, user_id bigint, email varchar(255), firstname varchar(255), gender varchar(255), lastname varchar(255), phone varchar(255), primary key (id)) engine=InnoDB;
+create table picture (id bigint not null auto_increment, person_id bigint, large varchar(255), medium varchar(255), thumbnail varchar(255), primary key (id)) engine=InnoDB;
+create table user (id bigint not null auto_increment, person_id bigint, md5 varchar(255), password varchar(255), salt varchar(255), sha1 varchar(255), sha256 varchar(255), username varchar(255), uuid varchar(255), primary key (id)) engine=InnoDB;
+alter table address add constraint UK5k57pkctki2o1wpmk2880r74j unique (person_id);
+alter table person add constraint UK77e12pjkm9v423j9hd3u10bk1 unique (user_id);
+alter table picture add constraint UKdha0uli8b56fv80bnoxw5qt4k unique (person_id);
+alter table user add constraint UKskugu4aa786hx4o05wn6cs7q0 unique (person_id);
+alter table address add constraint FKib7ks475hbp6yme4ooi9btyq9 foreign key (city_id) references location (id);
+alter table address add constraint FK81ihijcn1kdfwffke0c0sjqeb foreign key (person_id) references person (id);
+alter table location add constraint FKm5xl34yboc8re75qsac6svt6g foreign key (parent_id) references location (id);
+alter table person add constraint FK2is3ph79mqcwtkd724syhtjbi foreign key (user_id) references user (id);
+alter table picture add constraint FK41i6hfm4sdrkrm9krf2h1i9fx foreign key (person_id) references person (id);
+alter table user add constraint FKir5g7yucydevmmc84i788jp79 foreign key (person_id) references person (id);

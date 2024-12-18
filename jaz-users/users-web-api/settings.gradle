@@ -1,0 +1,4 @@
+rootProject.name = 'users-web-api'
+
+include 'users-data'
+project(':users-data').projectDir = new File(settingsDir,'../users-data')
