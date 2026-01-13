@@ -71,7 +71,7 @@ Spring oferuje **abstrakcję cache**, która pozwala:
 
 ---
 
-### 4️⃣ Demo – Cacheable + Caffeine
+### 4️⃣ Demo – Cacheable + ConcurrentMap
 
 Scenariusz demo:
 
@@ -81,7 +81,7 @@ Scenariusz demo:
 
 Zakres demo:
 
-* konfiguracja `CaffeineCacheManager`,
+* konfiguracja `SimpleCacheManager` i `ConcurrentMapCache`,
 * TTL i limit rozmiaru cache,
 * obserwacja cache hit / miss.
 
