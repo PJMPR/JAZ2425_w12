@@ -26,7 +26,6 @@ Ten wykład jest praktycznym wprowadzeniem do **mechanizmów cache w aplikacjach
 
 * In-memory cache
 * Distributed cache
-* (krótkie wspomnienie: HTTP / CDN)
 
 **In-memory:**
 
