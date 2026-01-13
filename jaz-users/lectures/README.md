@@ -106,7 +106,7 @@ Zakres demo:
 
 ---
 
-### 6️⃣ Distributed cache – Redis w Springu (ok. 10 min)
+### 6️⃣ Distributed cache – Redis w Springu
 
 **Kiedy potrzebujesz Redis?**
 
